@@ -18,7 +18,7 @@ export interface Brawler {
   imageUrl3: string;
   class: Class;
   rarity: Rarity;
-  unlock: null;
+  unlock: number | null;
   description: string;
   starPowers: Gadget[];
   gadgets: Gadget[];

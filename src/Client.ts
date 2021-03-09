@@ -37,6 +37,8 @@ class Client {
   };
 
   /**
+   * Do not forget to credit Brawlify.com when using this endpoint!
+   *
    * @param range Trophy range
    * @returns Active and Upcoming Events
    */
@@ -62,11 +64,17 @@ class Client {
 
   /**
    * Fetch data for all the maps
+   *
+   * Do not forget to credit Brawlify.com when using this endpoint!
    * @returns List of data about all the maps
    */
   public getMaps = async () => await this.request<brawlMaps>("/maps");
+
   /**
    * Fetch data about a single map
+   *
+   * Do not forget to credit Brawlify.com when using this endpoint!
+   *
    * @param id Map id. Return data about one map only
    * @param range Map data from a trophy range
    * @returns Data about a single map
@@ -97,6 +105,16 @@ class Client {
    */
   public getIcons = async () => await this.request<Icons>("/icons");
 
+  /**
+   * Not all clubs are tracked. Only few that have tracking enabled on brawlify.com
+   * If you request historical data for a club that isn't being tracked,
+   * you will get an error back with status code 403 or an outdated response.
+   *
+   * Do not forget to credit Brawlify.com when using this endpoint!
+   *
+   * @param tag Club tag
+   * @returns Data about a club
+   */
   public getClubLog = async (tag: string) =>
     await this.request<ClubLog>(`/clublog/${tag}`);
 }

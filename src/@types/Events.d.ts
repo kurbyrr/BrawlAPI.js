@@ -5,16 +5,16 @@ export interface Events {
   upcoming: Event[];
 }
 
-interface Event {
+export interface Event {
   slot: Slot;
   startTime: string;
   endTime: string;
   reward: number;
   map: Map;
-  modifier: null;
+  modifier: Environment | null;
 }
 
-interface Map {
+export interface Map {
   id: number;
   new: boolean;
   disabled: boolean;
@@ -32,16 +32,16 @@ interface Map {
   teamStats: TeamStat[];
 }
 
-interface Environment {
+export interface Environment {
   id: number;
   name: string;
   hash: string;
-  path: string;
+  path?: string;
   version: number;
   imageUrl: string;
 }
 
-interface GameMode {
+export interface GameMode {
   id: number;
   name: string;
   hash: string;
@@ -51,15 +51,15 @@ interface GameMode {
   imageUrl: string;
 }
 
-interface Stat {
-  brawler: string;
+export interface Stat {
+  brawler: number;
   winRate: number;
   useRate: number;
   starRate?: number;
   avgPosition?: number;
 }
 
-interface TeamStat {
+export interface TeamStat {
   name: string;
   hash: string;
   brawler1: number;
@@ -68,16 +68,16 @@ interface TeamStat {
   data: Data;
 }
 
-interface Data {
-  winRate: string;
-  useRate: string;
+export interface Data {
+  winRate: number;
+  useRate: number;
   wins: number;
   losses: number;
   draws: number;
   total: number;
 }
 
-interface Slot {
+export interface Slot {
   id: number;
   name: string;
   hash: string;

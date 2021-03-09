@@ -1,17 +1,24 @@
 {
   "name": "brawlapi.js",
   "version": "1.0.1",
-  "description": "",
+  "description": "NodeJS API wrapper for https://brawlapi.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && tsc && cp -r src/@types dist/",
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/kurbyrr/brawlapi.js"
+  },
+  "license": "MIT",
   "dependencies": {
     "@types/node-fetch": "^2.5.8",
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.3"
   }
 }
