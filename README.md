@@ -2,6 +2,16 @@
 
 NodeJS API wrapper for https://brawlapi.com
 
+# Installation
+
+```
+npm i brawlapi.js
+```
+
+```
+yarn add brawlapi.js
+```
+
 # Usage
 
 ```js
