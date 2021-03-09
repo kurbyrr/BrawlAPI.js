@@ -1,6 +1,6 @@
 {
   "name": "brawlapi.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS API wrapper for https://brawlapi.com",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
