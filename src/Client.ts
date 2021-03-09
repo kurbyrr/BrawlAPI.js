@@ -4,7 +4,8 @@ import { ClubLog } from "./@types/ClubLog";
 import { Events } from "./@types/Events";
 import { GameMode, GameModes } from "./@types/GameModes";
 import { Icons } from "./@types/Icons";
-import { brawlMap, brawlMaps } from "./@types/Maps";
+import { BrawlMap } from "./@types/Map";
+import { brawlMaps } from "./@types/Maps";
 
 class APIError extends Error {
   public status: number;
@@ -81,8 +82,8 @@ class Client {
    */
   public getMap = async (id: number | string, range?: trophyRange) => {
     if (id && range)
-      return await this.request<brawlMap>(`/maps/${id}/${range}`);
-    return await this.request<brawlMap>(`/maps/${id}`);
+      return await this.request<BrawlMap>(`/maps/${id}/${range}`);
+    return await this.request<BrawlMap>(`/maps/${id}`);
   };
 
   /**

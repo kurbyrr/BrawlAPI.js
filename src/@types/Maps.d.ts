@@ -4,7 +4,7 @@ export interface brawlMaps {
   list: brawlMap[];
 }
 
-export interface brawlMap {
+interface brawlMap {
   id: number;
   new: boolean;
   disabled: boolean;
