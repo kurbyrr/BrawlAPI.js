@@ -5,7 +5,7 @@ NodeJS API wrapper for https://brawlapi.com
 # Usage
 
 ```js
-import { Client } from "brawlapi";
+import { Client } from "brawlapi.js";
 const client = new Client();
 const main = async () => {
   const maps = await client.getMaps();
